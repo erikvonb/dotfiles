@@ -17,6 +17,7 @@ set expandtab
 " Folding
 set foldmethod=indent
 set foldcolumn=2
+set foldlevel=99
 
 " Misc insert mode maps
 inoremap jk <esc>

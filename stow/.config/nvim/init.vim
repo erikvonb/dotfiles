@@ -19,6 +19,10 @@ set foldmethod=indent
 set foldcolumn=2
 set foldlevel=99
 
+" Splits
+set splitright
+set splitbelow
+
 " Misc insert mode maps
 inoremap jk <esc>
 
@@ -29,4 +33,7 @@ nnoremap <c-l> :tabnext<cr>
 " Misc normal mode maps
 nnoremap + <end>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ev :edit $MYVIMRC<cr>
 
+" Misc visual mode maps
+vnoremap + <end>

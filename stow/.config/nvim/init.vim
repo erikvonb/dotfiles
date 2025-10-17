@@ -23,6 +23,11 @@ set foldlevel=99
 set splitright
 set splitbelow
 
+" Show special characters
+set listchars=tab:→\ ,trail:·,nbsp:+
+set list
+highlight Whitespace ctermfg=6
+
 " Misc insert mode maps
 inoremap jk <esc>
 

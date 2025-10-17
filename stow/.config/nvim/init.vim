@@ -42,3 +42,8 @@ nnoremap <leader>ev :edit $MYVIMRC<cr>
 
 " Misc visual mode maps
 vnoremap + <end>
+
+augroup filetype_haskell
+    autocmd FileType haskell setlocal shiftwidth=2
+augroup END
+

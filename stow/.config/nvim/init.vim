@@ -45,5 +45,6 @@ vnoremap + <end>
 
 augroup filetype_haskell
     autocmd FileType haskell setlocal shiftwidth=2
+    autocmd FileType cabal setlocal shiftwidth=2
 augroup END
 

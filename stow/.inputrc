@@ -1,0 +1,21 @@
+$include /etc/inputrc
+
+# Display possible completions in filetype based colours.
+set colored-stats on
+
+# Ignore case when completing.
+set completion-ignore-case on
+
+# Show the matching opening parenthesis when writing a closing one.
+set blink-matching-paren on
+
+set bell-style none
+
+# When completing, if the common prefix is longer than 5 characters, replace
+# the prefix with ellipses when printing the possible completions.
+set completion-prefix-display-length 5
+
+# Up and down arrows search based on current prefix.
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+

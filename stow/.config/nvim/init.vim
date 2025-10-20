@@ -48,3 +48,13 @@ augroup filetype_haskell
     autocmd FileType cabal setlocal shiftwidth=2
 augroup END
 
+" fzf setup
+if isdirectory(expand("~/.fzf"))
+    set rtp+=~/.fzf
+    nnoremap <leader>ff :FZF<cr>
+endif
+
+" Simple way to allow an additional local dotfile.
+if filereadable(expand("~/.nvimrc.local"))
+    source ~/.nvimrc.local
+endif

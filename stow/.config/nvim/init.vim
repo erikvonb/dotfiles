@@ -28,12 +28,19 @@ set listchars=tab:→\ ,trail:·,nbsp:+
 set list
 highlight Whitespace ctermfg=6
 
+" Search case sensitivity
+set ignorecase
+set smartcase
+
 " Misc insert mode maps
 inoremap jk <esc>
 
 " Tab switching
 nnoremap <c-h> :tabprevious<cr>
 nnoremap <c-l> :tabnext<cr>
+
+" Don't jump when searching
+nnoremap * *N
 
 " Misc normal mode maps
 nnoremap + <end>

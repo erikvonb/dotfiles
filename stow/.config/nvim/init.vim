@@ -67,6 +67,13 @@ if isdirectory(expand("~/.fzf"))
     nnoremap <leader>ff :FZF<cr>
 endif
 
+let s:colorschemes=getcompletion("", "color")
+if index(s:colorschemes, "gruvbox-material") >= 0
+    colorscheme gruvbox-material
+elseif index(s:colorschemes, "gruvbox") >= 0
+    colorscheme gruvbox
+endif
+
 " Simple way to allow an additional local dotfile.
 if filereadable(expand("~/.nvimrc.local"))
     source ~/.nvimrc.local

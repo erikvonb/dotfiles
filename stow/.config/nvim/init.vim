@@ -32,6 +32,9 @@ highlight Whitespace ctermfg=6
 set ignorecase
 set smartcase
 
+" System clipboard
+set clipboard+=unnamedplus
+
 " Misc insert mode maps
 inoremap jk <esc>
 
@@ -41,6 +44,9 @@ nnoremap <c-l> :tabnext<cr>
 
 " Don't jump when searching
 nnoremap * *N
+
+" Close quickfix window
+nnoremap <leader>q :cclose<cr>
 
 " Misc normal mode maps
 nnoremap + <end>

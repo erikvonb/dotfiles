@@ -17,3 +17,6 @@ echo "git clone https://github.com/sainnhe/gruvbox-material $NVIM_COLORSCHEME_DI
 
 echo "nvim: fugitive"
 echo "git clone https://tpope.io/vim/fugitive.git $NVIM_PACK_DIR/tpope/start/fugitive/"
+
+echo "nvim: lsp"
+echo "git clone https://github.com/neovim/nvim-lspconfig $NVIM_PACK_DIR/nvim/start/nvim-lspconfig"

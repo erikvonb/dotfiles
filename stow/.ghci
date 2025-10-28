@@ -1,2 +1,2 @@
-:set editor nvim
+:set editor ~/bin/nvim
 :set +s

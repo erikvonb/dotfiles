@@ -9,3 +9,10 @@ export PATH="$HOME/bin:$PATH"
 
 alias rm="rm -i"
 
+vimd() {
+    local offset=${1:-"0"}
+    local commit="HEAD~${offset}"
+    local file=$(git diff --name-only --relative ${commit} | fzf)
+    echo $file
+    nvim "$file"
+}

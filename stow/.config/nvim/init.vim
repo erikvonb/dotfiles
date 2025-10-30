@@ -48,12 +48,23 @@ nnoremap * *N
 " Close quickfix window
 nnoremap <leader>q :cclose<cr>
 
+" fugitive maps
+nnoremap <leader>gb :Git blame<cr>
+
+" LSP maps
+nnoremap gd <cmd>lua vim.lsp.buf.definition()<cr>
+nnoremap gD <cmd>lua vim.lsp.buf.declaration()<cr>
+nnoremap gi <cmd>lua vim.lsp.buf.implementation()<cr>
+nnoremap go <cmd>lua vim.lsp.buf.type_definition()<cr>
+nnoremap gr <cmd>lua vim.lsp.buf.references()<cr>
+nnoremap <leader>le <cmd>lua vim.diagnostic.open_float()<cr>
+
 " Misc normal mode maps
-nnoremap + <end>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 
-" Misc visual mode maps
+" End-of-line with +
+nnoremap + <end>
 vnoremap + <end>
 
 augroup filetype_haskell

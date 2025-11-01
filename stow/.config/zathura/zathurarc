@@ -1,0 +1,9 @@
+# Use system clipboard
+set selection-clipboard clipboard
+
+# Default to recolored mode
+set recolor true
+set recolor-darkcolor "#dcdccc"
+set recolor-lightcolor "#1f1f1f"
+
+set font "monospace normal 16"

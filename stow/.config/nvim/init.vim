@@ -32,6 +32,9 @@ highlight Whitespace ctermfg=6
 set ignorecase
 set smartcase
 
+" Don't wrap searches to the top
+set nowrapscan
+
 " System clipboard
 set clipboard+=unnamedplus
 
@@ -42,8 +45,9 @@ inoremap jk <esc>
 nnoremap <c-h> :tabprevious<cr>
 nnoremap <c-l> :tabnext<cr>
 
-" Don't jump when searching
-nnoremap * *N
+" Case-sensitive and exact-word search with * and #
+nnoremap * /\C\<<C-R>=expand('<cword>')<CR>\><CR>N
+nnoremap # ?\\C<<C-R>=expand('<cword>')<CR>\><CR>N
 
 " Close quickfix window
 nnoremap <leader>q :cclose<cr>

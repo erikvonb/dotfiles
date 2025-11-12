@@ -38,6 +38,12 @@ echo "git clone https://github.com/sainnhe/gruvbox-material $NVIM_COLORSCHEME_DI
 echo "nvim: fugitive"
 echo "git clone https://tpope.io/vim/fugitive.git $NVIM_PACK_DIR/tpope/start/fugitive/"
 
+echo "nvim: vinegar"
+echo "git clone https://github.com/tpope/vim-vinegar.git $NVIM_PACK_DIR/tpope/start/vinegar/"
+
+echo "nvim: obsession"
+echo "git clone https://github.com/tpope/vim-obsession.git $NVIM_PACK_DIR/tpope/start/obsession/"
+
 echo "nvim: lsp"
 echo "git clone https://github.com/neovim/nvim-lspconfig $NVIM_PACK_DIR/nvim/start/nvim-lspconfig"
 

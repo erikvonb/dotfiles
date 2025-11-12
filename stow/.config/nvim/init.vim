@@ -79,7 +79,13 @@ augroup END
 " fzf setup
 if isdirectory(expand("~/.fzf"))
     set rtp+=~/.fzf
+
+    let g:fzf_vim = {}
+    let g:fzf_vim.preview_window = ['hidden,right,50%,<70(up,40%)', 'ctrl-p']
+
     nnoremap <leader>ff :FZF<cr>
+    nnoremap <leader>fg :RG!<cr>
+    nnoremap <leader>fh :call fzf#vim#files('', {'options': '--query <c-r>=expand('%:t:r')<cr>'})<cr>
 endif
 
 let s:colorschemes=getcompletion("", "color")

@@ -38,6 +38,9 @@ set nowrapscan
 " System clipboard
 set clipboard+=unnamedplus
 
+" Close brackets (in some cases)
+inoremap {<cr> {<cr>}<esc>O
+
 " Misc insert mode maps
 inoremap jk <esc>
 
@@ -63,6 +66,9 @@ nnoremap go <cmd>lua vim.lsp.buf.type_definition()<cr>
 nnoremap gr <cmd>lua vim.lsp.buf.references()<cr>
 nnoremap <leader>le <cmd>lua vim.diagnostic.open_float()<cr>
 
+" Clear search higlhighting
+nnoremap <leader><c-l> :nohlsearch<cr>
+
 " Misc normal mode maps
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ev :edit $MYVIMRC<cr>
@@ -70,6 +76,9 @@ nnoremap <leader>ev :edit $MYVIMRC<cr>
 " End-of-line with +
 nnoremap + <end>
 vnoremap + <end>
+
+" see :help cfilter-plugin
+packadd cfilter
 
 augroup filetype_haskell
     autocmd FileType haskell setlocal shiftwidth=2
@@ -86,6 +95,7 @@ if isdirectory(expand("~/.fzf"))
     nnoremap <leader>ff :FZF<cr>
     nnoremap <leader>fg :RG!<cr>
     nnoremap <leader>fh :call fzf#vim#files('', {'options': '--query <c-r>=expand('%:t:r')<cr>'})<cr>
+    nnoremap <leader>fb :Buffers<cr>
 endif
 
 let s:colorschemes=getcompletion("", "color")

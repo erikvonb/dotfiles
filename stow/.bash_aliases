@@ -7,6 +7,8 @@ export PS1="\[\033[${PROMPT_COLOR}m\]\w\[\033[0m\]$ "
 
 export PATH="$HOME/bin:$PATH"
 
+export FZF_DEFAULT_COMMAND="rg --files"
+
 alias rm="rm -i"
 
 vimd() {

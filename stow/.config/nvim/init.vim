@@ -65,6 +65,7 @@ nnoremap gi <cmd>lua vim.lsp.buf.implementation()<cr>
 nnoremap go <cmd>lua vim.lsp.buf.type_definition()<cr>
 nnoremap gr <cmd>lua vim.lsp.buf.references()<cr>
 nnoremap <leader>le <cmd>lua vim.diagnostic.open_float()<cr>
+nnoremap <leader>la <cmd>lua vim.lsp.buf.code_action()<cr>
 
 " Clear search higlhighting
 nnoremap <leader><c-l> :nohlsearch<cr>

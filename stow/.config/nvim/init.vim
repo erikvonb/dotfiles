@@ -48,9 +48,8 @@ inoremap jk <esc>
 nnoremap <c-h> :tabprevious<cr>
 nnoremap <c-l> :tabnext<cr>
 
-" Case-sensitive and exact-word search with * and #
-nnoremap * /\C\<<C-R>=expand('<cword>')<CR>\><CR>N
-nnoremap # ?\\C<<C-R>=expand('<cword>')<CR>\><CR>N
+" Case-sensitive and exact-word search with *
+nnoremap * "syiw<esc>: let @/ = "\\<" . @s . "\\>"<cr>:set hlsearch<cr>
 
 " Close quickfix window
 nnoremap <leader>q :cclose<cr>
